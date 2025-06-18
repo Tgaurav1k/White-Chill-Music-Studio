@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="music.css">
+  <title>whitehillstudios -music</title>
+  <style>
+    *{
+         margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
+    }
+
+        /* Films Section */
+    .films-section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .films-categories {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+       /* Search Section */
+    .search-section {
+      text-align: center;
+      margin: 2rem 0;
+      
+    }
+
+    .search-section h3 {
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+        /* Films List */
+
+.films-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 40px 20px;
+}
+
+/* Individual Card Styling */
+.card {
+  background-color: #111;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Card Image Styling */
+.card-img-top {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Optional animation for scroll reveal */
+.card {
+  opacity: 0;
+  transform: translateY(30px);
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+   /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #000;
+      color: #fff;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <nav class="nav-box">
+      <a href="#"><img src="/img/whitechill.png" alt="Home"></a>
+      <a href="production.html"><img src="img/production.png" alt="Production"></a>
+      <a href="Music.html"><img src="/img/music.png" alt="Music"></a>
+      <a href="Distribution.html"><img src="/img/distribution.png" alt="Distribution"></a>
+      <a href="contact.html"><img src="/img/contact us.png" alt="Contact us"></a>
+      <a href="about.html"><img src="/img/about us new.png" alt="About"></a>
+      <a href="event.html"><img src="./img/events.png" alt="Events"></a>
+    </nav>
+
+  </header>
+
+  <div class="films-section">
+
+       <div class="films-categories">
+      <img src="./imgvideoMusic.png" alt="music Video" width="80%" height="100%">
+    </div>
+
+  <div class="search-container">
+  <div class="input-group search-bar">
+    <input type="search" class="form-control" placeholder="Search a song by name" />
+    <button class="btn btn-primary">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+</div>
+      
+      <!-- Search input would go here -->
+
+    <div class="films-list">
+      <div class="card">
+        <img src="https://img.youtube.com/vi/ICr1s11C_Ag/sddefault.jpg" class="card-img-top" alt="...">
+      </div>
+    
+      <div class="card">
+        <img src="https://img.youtube.com/vi/TUsJ047-3fU/sddefault.jpg" class="card-img-top" alt="...">
+      </div>
+ 
+      <div class="card">
+        <img src="https://img.youtube.com/vi/R1ZLb_ltpnI/sddefault.jpg" class="card-img-top" alt="...">
+      </div>
+    
+      <div class="card">
+        <img src="https://img.youtube.com/vi/n6XSGFNYw_I/sddefault.jpg" class="card-img-top" alt="...">
+      </div>
+      
+      <div class="card">
+        <img src="https://img.youtube.com/vi/1v9_bagUCB8/sddefault.jpg" class="card-img-top" alt="...">
+      </div>
+
+      <div class="card">
+        <img src="https://img.youtube.com/vi/AQXS9q94cCA/sddefault.jpg" class="card-img-top" alt="...">
+      </div>
+ 
+      <div class="card">
+        <img src="https://img.youtube.com/vi/e0Mt_wMty4A/sddefault.jpg" class="card-img-top" alt="...">
+      </div>
+      
+      <div class="card">
+        <img src="https://img.youtube.com/vi/sS_WyjSkt3U/sddefault.jpg" class="card-img-top" alt="...">
+      </div>
+
+           <div class="card">
+        <img src="https://img.youtube.com/vi/n6XSGFNYw_I/sddefault.jpg" class="card-img-top" alt="...">
+      </div>
+</div>
+
+<div> <img src="Distribution imgs/footerSeUpr.png" alt="" width="100%" height="100%">
+<footer class="custom-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>CONTACT US</h4>
+      <p>info@whitehillstudios.com</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>FOLLOW US</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-section location">
+      <h4>LOCATION</h4>
+      <p>E-314, Phase, 8A, Industrial Area, Sector 75,<br>
+        Sahibzada Ajit Singh Nagar, Punjab 140308</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>OFFICE</h4>
+      <p>Canada +16047249137</p>
+      <p>India +918146070000</p>
+    </div>
+
+    <div class="footer-section newsletter">
+      <h4>SUBSCRIBE TO NEWSLETTER</h4>
+      <form class="subscribe-form">
+        <input type="email" placeholder="Your Email">
+      </form>
+    </div>
+  </div>
+</footer>
+ </div>
+  <script src="production.js"></script>
+</body>
+
+</html>

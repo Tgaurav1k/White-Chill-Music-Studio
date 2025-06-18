@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>White Hill Studios</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      background-color: #f7f7f7;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo {
+      max-width: 90vw;
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      display: block;
+      margin: auto;
+      opacity: 0;
+      animation: fadeInZoom 1.5s ease-in-out forwards;
+      animation-delay: 1s;
+    }
+
+    @keyframes fadeInZoom {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    footer {
+      width: 100%;
+      background-color: #000;
+      color: #ccc;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 14px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      animation: fadeFooter 1s ease-in-out forwards;
+      animation-delay: 2.5s;
+    }
+
+    @keyframes fadeFooter {
+      to {
+        opacity: 1;
+      }
+    }
+
+    footer a {
+      color: #7eb8ff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        max-width: 95vw;
+        max-height: 80vh;
+      }
+
+      footer {
+        font-size: 12px;
+        padding: 10px 0;
+      }
+    }
+  </style>
+  </style>
+
+  
+</head>
+
+<body>
+  
+  <div class="container">
+    <img src="main img.jpg" alt="White Hill Studios" class="logo" />
+  </div>
+
+  <footer>
+    <p>© Copyright 2019 - White Hill Production Inc. All Rights Reserved.
+      <a href="#">Privacy Policy</a>
+    </p>
+  </footer>
+</body>
+<script>
+    setTimeout(function () {
+      window.location.href = "home.html"; // your second page filename
+    }, 5000); // wait 5 seconds
+  </script>
+</html>

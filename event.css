@@ -1,0 +1,87 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  padding: 40px;
+  background-color: black;
+}
+
+.event-card {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.event-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.event-card .date {
+  color: #555;
+  font-size: 14px;
+}
+
+.event-card .title {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.event-card .details {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Responsive Grid */
+@media (max-width: 1200px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .card-grid {
+    grid-template-columns: 1fr; /* 1 card per row */
+  }
+}
+
+/* Initial hidden state */
+.card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.4s ease;
+  pointer-events: none; /* Disable hover before visible */
+}
+
+/* After scroll reveals it */
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Hover effect after scroll */
+.card.visible:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}

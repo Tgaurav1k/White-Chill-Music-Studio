@@ -1,0 +1,185 @@
+/* Navigation Container */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black; /* ✅ Set background on body only */
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.nav-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #111;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* Navigation Links */
+.nav-box a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 150px;
+    transition: transform 0.3s ease;
+}
+
+/* Image Styling */
+.nav-box img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.nav-box a:hover img {
+    transform: scale(1.2);
+}
+
+/* Initial hidden state */
+.card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.4s ease;
+  pointer-events: none; /* Disable hover before visible */
+}
+
+/* After scroll reveals it */
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Hover effect after scroll */
+.card.visible:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.custom-footer {
+  background-color: #000;
+  color: white;
+  padding: 3rem 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-section {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.footer-section h4 {
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.footer-section p {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  display: inline-flex;
+  background-color: #444;
+  color: white;
+  border-radius: 50%;
+  padding: 0.7rem;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #666;
+}
+
+.subscribe-form {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.subscribe-form input[type="email"] {
+  padding: 0.8rem;
+  flex: 1;
+  border: none;
+  background-color: #1c1c1c;
+  color: white;
+}
+
+.subscribe-form button {
+  padding: 0.8rem 1.5rem;
+  background-color: #ddd;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-form button:hover {
+  background-color: #bbb;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  width: 100%;
+}
+
+.search-bar {
+  max-width: 500px;
+  width: 100%;
+}
+
+.search-bar input {
+  background-color: #222;
+  color: white;
+  border: none;
+}
+
+.search-bar input::placeholder {
+  color: #aaa;
+}
+
+.search-bar .btn {
+  background-color: #444;
+  border: none;
+}
+
+

@@ -1,0 +1,259 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Wrapper */
+.HomeMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  width: 90%;
+  max-width: 1400px;
+  padding: 40px 20px;
+}
+
+/* === LEFT SECTION: Social Icons === */
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.facebook { background: #3b5998; }
+.twitter { background: #1da1f2; }
+.instagram {
+  background: radial-gradient(circle at 30% 30%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+.youtube { background: #ff0000; }
+
+/* === CENTER SECTION === */
+.container {
+  flex: 1;
+  text-align: center;
+}
+
+.top-row,
+.bottom-row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.item {
+  text-align: center;
+}
+
+.item img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.item p {
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+/* Logo */
+.logo img {
+  width: 200px;
+  margin: 20px auto;
+  transition: 0.3s ease-in-out;
+}
+
+/* === RIGHT SECTION: Vertical Video Slider === */
+.slider-container {
+  width: 250px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+}
+
+.slider-track {
+  display: flex;
+  flex-direction: column;
+  animation: scrollUp 20s linear infinite;
+}
+
+.slide {
+  height: 250px;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.slide::after {
+  content: "▶";
+  font-size: 40px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+@keyframes scrollUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+/* === Hover Animations === */
+.animated-production:hover {
+  transform: scale(1.1) rotate(-5deg);
+  box-shadow: 0 6px 16px rgba(255, 0, 0, 0.4);
+}
+
+.animated-about:hover {
+  transform: rotate(360deg);
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
+}
+
+.animated-music:hover {
+  transform: scale(1.2);
+  filter: hue-rotate(90deg);
+  box-shadow: 0 4px 20px rgba(0, 255, 0, 0.4);
+}
+
+.animated-logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px #333);
+}
+
+.animated-events:hover {
+  animation: bounce 1s infinite;
+}
+
+.animated-contact:hover {
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 6px 16px rgba(255, 165, 0, 0.4);
+}
+
+.animated-distribution:hover {
+  transform: scale(1.2);
+  filter: grayscale(0.3) brightness(1.2);
+  box-shadow: 0 6px 18px rgba(128, 0, 128, 0.4);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Focus-on-hover effect */
+.top-row:hover .item img,
+.bottom-row:hover .item img {
+  opacity: 0.3;
+  transform: scale(0.8);
+}
+
+.top-row .item:hover img,
+.bottom-row .item:hover img {
+  opacity: 1 !important;
+  transform: none !important;
+  z-index: 2;
+}
+body {
+  visibility: hidden;
+  opacity: 0;
+}
+
+body.loaded {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+body.loaded {
+  animation: fadeInPage 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInPage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Hide all icons initially */
+.item img {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Animate all icons after page load */
+body.loaded .animated-production,
+body.loaded .animated-about,
+body.loaded .animated-music,
+body.loaded .animated-events,
+body.loaded .animated-contact,
+body.loaded .animated-distribution {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delays for animation (start after 2s) */
+.animated-production {
+  transition-delay: 2s;
+}
+.animated-about {
+  transition-delay: 2.2s;
+}
+.animated-music {
+  transition-delay: 2.4s;
+}
+.animated-events {
+  transition-delay: 2.6s;
+}
+.animated-contact {
+  transition-delay: 2.8s;
+}
+.animated-distribution {
+  transition-delay: 3s;
+}
+
+

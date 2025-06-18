@@ -1,0 +1,185 @@
+.films-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 2rem; /* space between cards */
+  padding: 2rem;
+  background-color: #000; /* optional: match screenshot */
+}
+
+/* Card Styling */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+/* Show on scroll */
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.card.visible:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image should fill the top */
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Card Body Centered */
+.card-body {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-body a.btn {
+  margin-top: 0.5rem;
+}
+
+/* Responsive (2 cards on tablet, 1 on mobile) */
+@media (max-width: 992px) {
+  .films-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .films-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.custom-footer {
+  background-color: #000;
+  color: white;
+  padding: 3rem 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-section {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.footer-section h4 {
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.footer-section p {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  display: inline-flex;
+  background-color: #444;
+  color: white;
+  border-radius: 50%;
+  padding: 0.7rem;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #666;
+}
+
+.subscribe-form {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.subscribe-form input[type="email"] {
+  padding: 0.8rem;
+  flex: 1;
+  border: none;
+  background-color: #1c1c1c;
+  color: white;
+}
+
+.subscribe-form button {
+  padding: 0.8rem 1.5rem;
+  background-color: #ddd;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-form button:hover {
+  background-color: #bbb;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+body {
+  background-color: #000;
+  color: white;
+}
+
+header, .films-section, .films-list, footer, .input-group {
+  background-color: #000;
+  color: white;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  width: 100%;
+}
+
+.search-bar {
+  max-width: 500px;
+  width: 100%;
+}
+
+.search-bar input {
+  background-color: #222;
+  color: white;
+  border: none;
+}
+
+.search-bar input::placeholder {
+  color: #aaa;
+}
+
+.search-bar .btn {
+  background-color: #444;
+  border: none;
+}
